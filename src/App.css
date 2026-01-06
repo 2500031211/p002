@@ -1,50 +1,65 @@
-.app{
+.app {
   height: 100%;
   overflow: auto;
 }
-.app .profile{
+
+.app .profile {
   width: 800px;
   margin: 50px auto;
   display: flex;
   align-items: center;
-  
 }
-.app .profile img{
+
+.app .profile img {
   width: 100px;
   height: 100px;
 }
-.app .profile .info{
+
+.app .profile .info {
   margin-left: 50px;
 }
-.app .profile .info .name{
+
+.app .profile .info .name {
   font-size: 16pt;
   margin-bottom: 10px;
 }
-.app .profile .info .role{
+
+.app .profile .info .role {
   font-size: 9pt;
   color: #ccc;
   margin-bottom: 20px;
 }
-.app .profile .info .bio{
+
+.app .profile .info .bio {
   margin-bottom: 5px;
 }
-.app .profile .info button{
-  border:none;
+
+/* ✅ Flex container for buttons */
+.app .profile .info .buttons {
+  display: flex;
+  gap: 10px; /* space between buttons */
+  margin-top: 10px;
+}
+
+.app .profile .info .buttons button {
+  border: none;
   border-radius: 4px;
-  margin-right: 5px;
   padding: 5px;
-}
-.app .profile .info .follow{
   width: 75px;
 }
-.app .profile .info .message{
-  width: 75px;
+
+.app .profile .info .buttons .follow {
+  background: #f0f0f0;
+}
+
+.app .profile .info .buttons .message {
   background: #050505;
   border: 1px solid #ccc;
   color: white;
 }
-.app .status{
-  border-top: 1px solid #ccc ;
+
+.app .status {
+  border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
   height: 100px;
   width: 800px;
@@ -53,31 +68,47 @@
   align-items: center;
   justify-content: space-around;
 }
-.app .status .info{
- 
+
+.app .status .info {
   text-align: center;
 }
-.app .status .info .value{
+
+.app .status .info .value {
   font-weight: bold;
 }
-.app .status .info .label{
+
+.app .status .info .label {
   color: #ccc;
 }
-@media(max-width: 768px){
-  .app{
+
+/* ✅ Mobile view adjustments */
+@media (max-width: 768px) {
+  .app {
     padding: 10px;
     width: calc(100% - 20px);
   }
-  .app .profile{
-    width: 100px;
+
+  .app .profile {
+    width: 100%;
     flex-direction: column;
+    align-items: center; /* center content */
   }
-  .app .profile .info{
+
+  .app .profile .info {
     text-align: center;
     margin: 0;
     margin-top: 30px;
   }
-  .app .status{
+
+  /* ✅ Keep buttons side by side on mobile */
+  .app .profile .info .buttons {
+    display: flex;
+    justify-content: center; /* center horizontally */
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .app .status {
     width: 100%;
   }
 }
