@@ -7,6 +7,7 @@ class App extends Component {
       name:"Samala Shijal",
       role:"Student at KL University",
       bio:"Enthusiastic to work at MNC's ",
+      
       status:[{label:"Posts",value:"84"},
               {label:"Followers",value:"400"},
               {label:"Following",value:"387"}]
